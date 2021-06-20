@@ -2,11 +2,11 @@
 //いいね！用のJavaScript
 ////////////////////////////////////////
 
-$(function(){
+$(function(){  //$(function)はjQueryの書き方で、HTMLの処理を終えてから処理をされるようになる。
     // いいね!がクリックされたとき
     $('.js-like').click(function() {
-        const this_obj = $(this);
-        const like_id = $(this).data('like-id');
+        const this_obj = $(this);　//$(this)はイベントが発生する要素、すなわちここではクリックされる.JS-popover (プロフィール画像に指定したクラス)
+        const like_id = $(this).data('like-id');　
         const like_count_obj = $(this).parent().find('.js-like-count');
         let like_count = Number(like_count_obj.html());
 

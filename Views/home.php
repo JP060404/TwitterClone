@@ -45,7 +45,7 @@ $view_tweets = [
  * @param string $type ユーザー画像かツイート画像
  * @return string
  */
-function buildImagePath(string $name = null, string $type)
+function buildImagePath(string $name = null, string $type)  //stiringで引数を文字型列に指定することで、指定以外のデータが入力された場合ミスに気付ける//
 {
     if ($type === 'user' && !isset($name)) {   // ユーザーアイコンがアップロードされてないとみなしデフォルト画像を返す
         return HOME_URL . '/Views/img/icon-default-user.svg';
@@ -74,7 +74,7 @@ function convertToDayTimeAgo(string $datetime)
     } elseif ($diff_sec < 3600){  //3600秒=60分
         $time = $diff_sec / 60;
         $unit = '分前';
-    } elseif ($diff_sec < 86400){//86400=1時間
+    } elseif ($diff_sec < 86400){//86400=24時間
         $time = $diff_sec / 3600;
         $unit = '時間前'; 
     } elseif ($diff_sec < 2764800){ //2764800秒=32日
@@ -195,8 +195,8 @@ function convertToDayTimeAgo(string $datetime)
             <?php endif;?>
         </div>
     </div>  
-    <script>
-        document.addEventListener('DOMContentLoaded' , function() {
+    <script> //JSをHTMLに組み込む場合最後にすることで読み込みスピードが上がる。
+        document.addEventListener('DOMContentLoaded' , function() {　//第一引数にDOMContentLoadedを指定することで、ブラウザがHTMLを読み込み完了したタイミングで第二引数の処理を開始する。
             $('.js-popover').popover({
                 container: 'body'
             })
