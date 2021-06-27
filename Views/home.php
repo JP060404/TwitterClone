@@ -175,7 +175,8 @@ function convertToDayTimeAgo(string $datetime)
                                 <?php endif; ?>                            
                                 
                                 <div class="icon-list">
-                                    <div class="like js-like" data-like-id="<?php echo htmlspecialchars($view_tweet['like_id']);?>">
+                                    <div class="like js-like" data-like-id="<?php echo htmlspecialchars($view_tweet['like_id']);?>">    
+                                    <!-- data-like-idに配列のlike-idを入れることで、likeが押されたかどうかを判断。data属性はdata-の後ろに名前を付けて独自のタグにデータを入れることができる。 -->
                                         <?php
                                         if(isset($view_tweet['like_id'])){
                                             // いいね！している場合
