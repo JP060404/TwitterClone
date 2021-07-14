@@ -1,6 +1,6 @@
 <div class="tweet">
     <div class="user">
-        <a href="profile.php?user_id=1">
+        <a href="profile.php?user_id=<?php echo htmlspecialchars($view_tweet['user_id'] ); ?>">
             <img src="<?php echo buildImagePath($view_tweet['user_image_name'], 'user');?>" alt="">
         </a>
     </div>
@@ -15,10 +15,10 @@
 
         <?php if (isset($view_tweet['tweet_image_name'])) : ?>
             <img src="<?php echo buildImagePath($view_tweet['tweet_image_name'],'tweet'); ?>" alt="" class="post-image">
-        <?php endif; ?>                            
+        <?php endif; ?>  
         
         <div class="icon-list">
-            <div class="like js-like" data-like-id="<?php echo htmlspecialchars($view_tweet['like_id']);?>">    
+            <div class="like js-like" data-tweet-id="<?php echo htmlspecialchars($view_tweet['tweet_id']); ?>" data-like-id="<?php echo htmlspecialchars($view_tweet['like_id']);?>">    
             <!-- data-like-idに配列のlike-idを入れることで、likeが押されたかどうかを判断。data属性はdata-の後ろに名前を付けて独自のタグにデータを入れることができる。 -->
                 <?php
                 if(isset($view_tweet['like_id'])){
