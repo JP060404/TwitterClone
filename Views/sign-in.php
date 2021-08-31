@@ -4,7 +4,7 @@
 <html lang="ja">
  
 <head>
-    <?php include_once('..\Views\common\head.php'); ?>
+    <?php include_once('\xampp\htdocs\TwitterClone\Views\common\head.php'); ?>
  
     <title>ログイン画面 / Twitterクローン</title>
     <meta name="description" content="ログイン画面です">
