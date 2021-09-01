@@ -4,7 +4,7 @@
 <html lang="ja">
  
 <head>
-    <?php include_once('\xampp\htdocs\TwitterClone\Views\common\head.php'); ?>
+    <?php include_once('../Views/common/head.php'); ?>
  
     <title>ログイン画面 / Twitterクローン</title>
     <meta name="description" content="ログイン画面です">
@@ -30,7 +30,7 @@
             <p class="mt-2 mb-3 text-muted">&copy; 2021</p>
         </form>
     </main>
-    <?php include_once('..\Views\common\foot.php'); ?>
+    <?php include_once('../Views/common/foot.php'); ?>
 </body>
 
  
