@@ -9,7 +9,7 @@ include_once('../util.php');
 <html lang="ja">
  
 <head>
-    <?php include_once('..\Views\common\head.php'); ?>
+    <?php include_once('../Views/common/head.php'); ?>
  
     <title>会員登録画面 / Twitterクローン</title>
     <meta name="description" content="会員登録画面です">
@@ -30,7 +30,7 @@ include_once('../util.php');
             <p class="mt-2 mb-3 text-muted">&copy; 2021</p>　<!-- &copy;は🄫を表示する -->
         </form>
     </main>
-    <?php include_once('..\Views\common\foot.php'); ?>
+    <?php include_once('../Views/common/foot.php'); ?>
 </body>
  
 </html>
